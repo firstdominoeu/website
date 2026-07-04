@@ -1,0 +1,9 @@
+/.env/
+/.env
+/.direnv/
+/.direnv
+/node_modules/
+/result
+/result/
+/target
+/target/
