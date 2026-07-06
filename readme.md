@@ -1,7 +1,5 @@
 ## Development & Environment Setup
 
-[![Nix-Powered](https://img.shields.io/badge/Nix-Flakes-blue?logo=nixos&logoColor=white)](https://zero-to-nix.com/start)
-
 This repository uses `nix` to guarantee that everyone builds and runs the code with the exact same dependencies and tools. 
 
 > **New to Nix?** You do **not** need NixOS. This works natively on macOS and any standard Linux distribution. For a full, beginner-friendly guide, check out **[Zero to Nix](https://zero-to-nix.com/start)**.
