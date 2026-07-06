@@ -4,6 +4,7 @@ import html from "./index.html";
 
 Bun.serve({
 	port: 8080,
+
 	fetch: request => {
 		let url: URL = new URL(request.url);
 
