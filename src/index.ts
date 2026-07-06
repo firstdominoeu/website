@@ -1,16 +1,22 @@
-import express from "express";
+import html from "./index.html";
 
-function main() {
-	let server: express.Express = express();
-	
-	server.get("/", (request, response) => {
-		// serve website ... 
+Bun.serve({
+	port: 8080,
+	fetch: request => {
+		let url: URL = new URL(request.url);
 		
-	});
-	
-	server.get("/...", (request, response) => {
+		switch (url.pathname) {
+			case "/": return new Response(html as unknown as Bun.BodyInit, {
+				headers: {
+					"Content-Type": "text/html"
+				}
+			});
+			
+			case "/another-path": break
+		}
 		
-	});
-}
-
-main();
+		return new Response("not found", {
+			status: 404
+		});
+	}
+});
