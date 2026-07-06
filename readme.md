@@ -43,7 +43,7 @@ direnv allow
 code .
 ```
 
-> **How does `direnv` work?** Whenever you navigate into this directory, your tools are automatically loaded. The moment you leave the directory (`cd ..`), those tools instantly disappear from your shell, keeping your system completely clean.
+> **How does `direnv` work?** Whenever you navigate into this directory, your tools are automatically loaded. The moment you leave the directory, those tools instantly disappear from your shell, keeping your system completely clean.
 
 ### Cleaning Up
 
