@@ -1,14 +1,12 @@
-# Website
-
 ## Development & Environment Setup
 
 [![Nix-Powered](https://img.shields.io/badge/Nix-Flakes-blue?logo=nixos&logoColor=white)](https://zero-to-nix.com/start)
 
-This repository uses **Nix Flakes** to guarantee that everyone builds and runs the code with the exact same dependencies and tools. 
+This repository uses `nix` to guarantee that everyone builds and runs the code with the exact same dependencies and tools. 
 
-> ℹ️ **New to Nix?** You do **not** need NixOS. This works natively on macOS and any standard Linux distribution. For a full, beginner-friendly guide, check out **[Zero to Nix](https://zero-to-nix.com/start)**.
+> **New to Nix?** You do **not** need NixOS. This works natively on macOS and any standard Linux distribution. For a full, beginner-friendly guide, check out **[Zero to Nix](https://zero-to-nix.com/start)**.
 
-### One-Time Setup (If you don't have Nix)
+### One-Time Setup (If you don't have `nix`)
 
 If you don't have `nix` installed, run the official Determinate Systems installer and restart your terminal:
 
@@ -45,7 +43,7 @@ direnv allow
 code .
 ```
 
-> ℹ️ **How does `direnv` work?** Whenever you navigate into this directory, your tools are automatically loaded. The moment you leave the directory (`cd ..`), those tools instantly disappear from your shell, keeping your system completely clean.
+> **How does `direnv` work?** Whenever you navigate into this directory, your tools are automatically loaded. The moment you leave the directory (`cd ..`), those tools instantly disappear from your shell, keeping your system completely clean.
 
 ### Cleaning Up
 
