@@ -7,16 +7,49 @@
 		<link rel="icon" href="/asset/icon/eu.png?v=1" type="image/png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 		<title>First Domino</title>
 		<style>
+			:root {
+				--color-bright-snow: #F9F9F8;
+				--color-alabaster-gray: #E5E5E2;
+				--color-carbon-black: #1C1E1F;
+				--color-smart-blue: #4062BB;
+				--color-taupe: #807172;
+				--font-heading: "EB Garamond", serif;
+				--font-body: "Instrument Sans", sans-serif;
+				--font-accent: "Dancing Script", cursive;
+				--font-size-h1: 2.5rem;
+				--font-size-h2: 2rem;
+				--font-size-h3: 1.5rem;
+				--font-size-body: 1rem;
+				--font-size-sm: 0.875rem;
+				--line-height-heading: 1.2;
+				--line-height-body: 1.6;
+			}
+			h1, h2, h3 {
+				font-family: var(--font-heading);
+				color: var(--color-smart-blue);
+				line-height: var(--line-height-heading);
+				margin-bottom: 0.5em;
+			}
+			h1 { font-size: var(--font-size-h1); }
+			h2 { font-size: var(--font-size-h2); }
+			h3 { font-size: var(--font-size-h3); }
+			body {
+				font-family: var(--font-body);
+				font-size: var(--font-size-body);
+				line-height: var(--line-height-body);
+				color: var(--color-carbon-black);
+				background-color: var(--color-bright-snow);
+			}
 			* {
 				box-sizing: border-box;
 				padding: 0px;
 				margin: 0px;
 			}
-
+			
+			
 			nav {
 				display: flex;
 				flex-direction: row;
