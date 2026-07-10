@@ -1,6 +1,7 @@
 import * as Path from "path";
 import * as Process from "process";
 import html from "./index.html";
+import whyHtml from "./why.html";
 
 Bun.serve({
 	port: 8080,
@@ -10,6 +11,11 @@ Bun.serve({
 
 		switch (url.pathname) {
 			case "/": return new Response(html as unknown as Bun.BodyInit, {
+				headers: {
+					"Content-Type": "text/html"
+				}
+			});
+			case "/why": return new Response(whyHtml as unknown as Bun.BodyInit, {
 				headers: {
 					"Content-Type": "text/html"
 				}
