@@ -33,6 +33,9 @@
 					--font-size-h2: 1.6rem;
 					--font-size-h3: 1.3rem;
 				}
+				.section {
+					flex-direction: column;
+				}
 			}
 			h1, h2, h3 {
 				font-family: var(--font-heading);
@@ -135,9 +138,35 @@
 				flex-direction: row;
 				justify-content: center;
 				align-items: center;
+				gap: 32px;
+				width: 100%;
+				padding: 48px 0;
+			}
+			.section.reverse {
+				flex-direction: row-reverse;
+			}
+			.section-content {
+				flex: 6;
+			}
+			.section-content p {
+				margin-bottom: 1em;
+			}
+			.section-marker {
+				min-width: 20px;
+				min-height: 20px;
+				border: 2px solid var(--color-smart-blue);
+				transform: rotate(45deg);
 			}
 			.section-offset {
-				display: "flex"
+				display: flex;
+				flex: 4;
+				justify-content: center;
+				align-items: center;
+			}
+			.section-image {
+				max-width: 100%;
+				height: auto;
+				border-radius: 4px;
 			}
 		</style>
 </head>
@@ -153,6 +182,18 @@
 		<div class="gutter">
 			<div class="section">
 				<h1>Why a Federal Europe?</h1>
+			</div>
+
+			<div class="section">
+				<div class="section-content">
+					<h2>Economy</h2>
+					<p>Europe is the wealthiest continent that consistently acts as though it does not know it. The combined output of EU member states approaches $18 trillion, a figure that rivals the United States in scale. Yet that wealth is locked behind twenty-seven separate tax codes, regulatory frameworks built for national markets, and capital markets too fragmented to fund the next generation of European industry. The cost of this incoherence runs to an estimated €700 billion every year.</p>
+					<p>A federal fiscal architecture changes the equation entirely. Harmonised taxation, a genuine capital markets union, and shared sovereign debt instruments would release resources that fragmentation currently wastes. Europe would negotiate trade from a position of unified strength, attract investment at the scale its market actually warrants, and build the fiscal capacity to respond to crises at the speed they demand.</p>
+				</div>
+				<div class="section-marker"></div>
+				<div class="section-offset">
+					<img class="section-image" src="/asset/image/grayscale/economy.png" alt="Economy">
+				</div>
 			</div>
 		</div>
 	</div>
