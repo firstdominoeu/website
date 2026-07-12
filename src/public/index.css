@@ -1,0 +1,48 @@
+:root {
+	--color-bright-snow: #F9F9F8;
+	--color-alabaster-gray: #E5E5E2;
+	--color-carbon-black: #1C1E1F;
+	--color-smart-blue: #4062BB;
+	--color-taupe: #807172;
+	--font-heading: "EB Garamond", serif;
+	--font-body: "Instrument Sans", sans-serif;
+	--font-accent: "Dancing Script", cursive;
+	--font-size-h1: 2.5rem;
+	--font-size-h2: 2rem;
+	--font-size-h3: 1.5rem;
+	--font-size-body: 1rem;
+	--font-size-sm: 0.875rem;
+	--line-height-heading: 1.2;
+	--line-height-body: 1.6;
+}
+@media screen and (max-width: 768px) {
+	:root {
+		--font-size-h1: 2rem;
+		--font-size-h2: 1.6rem;
+		--font-size-h3: 1.3rem;
+	}
+}
+.footer-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	padding-bottom: 1.5rem;
+}
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 2rem;
+	margin-bottom: 0.5rem;
+}
+.footer img {
+	width: 18px;
+}
+.footer a {
+	transition: transform 0.2s ease;
+}
+.footer a:hover {
+	transform: translateY(-4px);
+}
