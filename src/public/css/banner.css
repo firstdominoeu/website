@@ -10,12 +10,7 @@ banner spinning-star-loader {
 	align-items: center;
 	will-change: opacity, visibility;
 }
-banner spinning-star-loader.hidden {
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
-	transition: opacity var(--fade-out-duration) ease-out, visibility var(--fade-out-duration);
-}
+
 banner spinning-star-loader img {
 	display: flex;
 	justify-content: center;
@@ -61,7 +56,6 @@ banner {
 	--gradient-eu-header-0: linear-gradient(135deg, var(--color-smart-blue) 0%, #12225B 100%);
 	--gradient-eu-header-1: linear-gradient(135deg, #5C7EE6 0%, var(--color-smart-blue) 100%);
 	--gradient-eu-header-2: linear-gradient(105deg, var(--color-smart-blue) 30%, #262F76 100%);
-
 }
 banner header {
 	display: grid;
@@ -93,35 +87,24 @@ banner header logo {
 		banner-header-heading-lift-in 600ms ease-out calc(900ms + 700ms + 800ms) forwards;
 }
 banner headline {
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 
 banner major {
 	display: block;
-	font-size: 7em;
+	font-size: clamp(2.25rem, 7vw, 6.5rem);
 	font-family: var(--font-body);
 	font-weight: bold;
+	line-height: 1;
+	letter-spacing: -0.03em;
 	color: var(--color-carbon-black);
-}
-@media screen and (max-width: 768px) {
-	banner major {
-		font-size: 2em;
-	}
-}
-@media screen and (max-width: 1300px) {
-	banner major {
-		font-size: 3em;
-	}
-}
-@media screen and (max-width: 1440px) {
-	banner major {
-		font-size: 6em;
-	}
+	text-wrap: balance;
 }
 
 banner minor {
 	display: block;
-	font-size: 2em;
+	font-size: clamp(1.25rem, 2.5vw, 2.25rem);
 	font-family: var(--font-body);
 	font-weight: bold;
 	color: var(--color-carbon-black);
@@ -152,62 +135,33 @@ banner button svg {
 }
 banner content {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 	grid-template-rows: 1fr;
+	gap: var(--space-xl);
 	flex-direction: column;
 	justify-content: start;
 	align-items: start;
-	min-width: 768px;
+	width: 100%;
 	max-width: 1440px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
 banner content illustration {
-	grid-row-start: 1;
-	grid-row-end: 1;
-	grid-column-start: 3;
-	grid-column-end: 4;
-	min-width: 100%;
-	max-width: 100%;
-	min-height: 100%;
-	max-height: 100%;
-	overflow-x: hidden;
-	overflow-y: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 banner content illustration img {
-	max-width: 500px;
 	width: 100%;
+	max-width: 500px;
 	height: auto;
-	transform: scale(1.1);
-}
-@media screen and (max-width: 768px) {
-	banner content illustration img {
-		max-width: 100px;
-	}
-}
-@media screen and (max-width: 1300px) {
-	banner content illustration img {
-		max-width: 400px;
-	}
-}
-@media screen and (max-width: 1000px) {
-	banner content illustration img {
-		max-width: 300px;
-	}
+	object-fit: contain;
 }
 banner side {
-	grid-row-start: 1;
-	grid-row-end: 1;
-	grid-column-start: 1;
-	grid-column-end: 3;
 	display: flex;
 	flex-direction: column;
-	min-width: 100%;
-	max-width: 100%;
 	min-height: 100%;
-	max-height: 100%;
-	gap: var(--space-2xl);
+	justify-content: space-between;
 }
 @keyframes banner-header-heading-fade-in {
 	0% {
@@ -223,5 +177,39 @@ banner side {
 	}
 	100% {
 		transform: translateY(0);
+	}
+}
+
+@media (width < 768px) {
+	banner spinning-star-loader {
+		--size: 32px;
+	}
+	banner header logo {
+		font-size: 1em;
+	}
+	banner major {
+		font-size: 2em;
+	}
+	banner content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: var(--space-xl)
+	}
+	banner headline {
+		align-items: center;
+		text-align: center;
+	}
+	banner side {
+		align-items: center;
+		gap: 0px;
+	}
+	banner button {
+		font-size: 1em;
+	}
+	banner content illustration img {
+		max-width: 256px;
 	}
 }

@@ -46,3 +46,9 @@ navigation button svg {
 navigation button a {
 	all: unset;
 }
+
+@media (width <= 425px) {
+	navigation {
+		display: none;
+	}
+}

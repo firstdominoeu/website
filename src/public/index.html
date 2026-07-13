@@ -38,6 +38,12 @@
 			    font-weight: 500;
 			    white-space: nowrap;
 			}
+			
+			@media (width <= 768px) {
+				support {
+					display: none;
+				}
+			}
 		</style>
 		<script blocking="render" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 		<script blocking="render" src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
@@ -79,7 +85,7 @@
 			<section>
 				<navigation>
 					<logo><a href="/">First Domino</a></logo>
-					<div>•</div>
+					<dot>•</dot>
 					<button-group>
 						<button>
 							<a href="/manifesto">Manifesto</a>

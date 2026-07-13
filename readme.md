@@ -79,3 +79,6 @@ This project was created using `bun init` in bun v1.3.13. [Bun](https://bun.com)
 
 
 `nix shell github:nix-community/bun2nix -c bun2nix -o bun.nix`
+
+
+`watchexec -e nix,ts,html --project-origin . -r -- nix run`
