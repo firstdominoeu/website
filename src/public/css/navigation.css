@@ -1,0 +1,48 @@
+navigation {
+	display: flex;
+	align-items: center;
+	min-width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	gap: var(--space-sm);
+}
+navigation logo {
+	display: block;
+	font-size: 1em;
+	font-family: var(--font-body);
+	font-weight: bold;
+	color: var(--color-carbon-black);
+	cursor: pointer;
+}
+navigation logo a {
+	all: unset;
+}
+navigation button-group {
+	display: flex;
+	gap: var(--space-sm);
+}
+navigation button {
+	all: unset;
+	display: flex;
+	align-items: center;
+	font-size: 0.75em;
+	font-family: var(--font-body);
+	font-weight: bold;
+	color: var(--color-carbon-black);
+	cursor: pointer;
+	gap: var(--space-sx);
+	text-decoration: underline;
+	transition: transform 0.2s ease-out;
+}
+navigation button:hover {
+	transform: translateY(-4px);
+}
+navigation button svg {
+	width: 8px;
+	height: 8px;
+	color: black;
+}
+navigation button a {
+	all: unset;
+}
