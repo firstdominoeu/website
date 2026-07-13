@@ -1,0 +1,30 @@
+horizontal-text-group {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	gap: 2rem;
+	min-width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+horizontal-text-group column {
+	flex: 1;
+	min-width: 256px;
+}
+
+horizontal-text-group p {
+	font-size: 1em;
+	font-family: var(--font-body);
+	font-weight: bold;
+	line-height: 1.6;
+	color: var(--color-carbon-black);
+}
+
+@media (width < 768px) {
+	horizontal-text-group {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 1.5rem;
+	}
+}
