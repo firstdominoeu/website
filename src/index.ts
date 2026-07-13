@@ -1,32 +1,37 @@
 import * as Path from "path";
 import * as Process from "process";
-import html from "./index.html";
-import whyHtml from "./why.html";
 
 Bun.serve({
 	port: 8080,
 
-	fetch: request => {
+	fetch: async request => {
 		let url: URL = new URL(request.url);
+		let urlPathName: string = url.pathname;
 
-		switch (url.pathname) {
-			case "/": return new Response(html as unknown as Bun.BodyInit, {
-				headers: {
-					"Content-Type": "text/html"
-				}
-			});
-			case "/why": return new Response(whyHtml as unknown as Bun.BodyInit, {
-				headers: {
-					"Content-Type": "text/html"
-				}
-			});
+		if (urlPathName === "/") {
+			urlPathName = "/index.html";
 		}
 
-		if (url.pathname.startsWith("/asset/")) {
-			let cwd: string = Process.cwd();
-			let path: string = Path.join(cwd, "src", url.pathname);
-			let file: Bun.BunFile = Bun.file(path);
+		let currentWorkingDirectory: string = Process.cwd();
+		let path: string = Path.join(currentWorkingDirectory, "src", "public", urlPathName);
 
+		let file: Bun.BunFile = Bun.file(path);
+		let fileExists: boolean = await file.exists();
+
+		if (!fileExists) {
+			if (!urlPathName.endsWith("/") && !Path.extname(urlPathName)) {
+				let htmlExtension: string = ".html";
+				let htmlFallbackPath: string = path + htmlExtension;
+				let htmlFile: Bun.BunFile = Bun.file(htmlFallbackPath);
+
+				if (await htmlFile.exists()) {
+					file = htmlFile;
+					fileExists = true;
+				}
+			}
+		}
+
+		if (fileExists) {
 			return new Response(file);
 		}
 
