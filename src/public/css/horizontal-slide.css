@@ -1,29 +1,36 @@
 horizontal-text-group {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(3, auto);
 	grid-template-rows: 1fr;
-	gap: 2rem;
+	gap: var(--space-lg);
 	min-width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	justify-content: center;
 }
 
+horizontal-text-group group {
+	display: flex;
+	gap: 32px;
+}
 horizontal-text-group column {
 	flex: 1;
-	min-width: 256px;
+	width: 100%;
+	max-width: 400px;
 }
 
 horizontal-text-group p {
 	font-size: 1em;
 	font-family: var(--font-body);
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 1.6;
 	color: var(--color-carbon-black);
+	text-align: justify;
 }
 
 @media (width < 768px) {
 	horizontal-text-group {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, auto);
 		grid-template-rows: 1fr;
 		gap: 1.5rem;
 	}

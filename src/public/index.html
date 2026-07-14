@@ -14,13 +14,13 @@
 		<link rel="stylesheet" blocking="render" href="css/footer.css">
 		<link rel="stylesheet" blocking="render" href="css/navigation.css">
 		<link rel="stylesheet" blocking="render" href="css/reset.css">
+		<link rel="stylesheet" blocking="render" href="css/horizontal-slide.css">
 		<style>
 			support {
 				display: block;
 			    width: 100%;
 			    max-width: 100%;
 			    background: var(--color-carbon-black-gradient);
-			    border-radius: 4px;
 			    padding: var(--space-md) 0;
 			    overflow: hidden;
 			}
@@ -43,6 +43,11 @@
 				support {
 					display: none;
 				}
+			}
+			
+			manifesto {
+				display: flex;
+				flex-direction: column;
 			}
 		</style>
 		<script blocking="render" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -161,14 +166,36 @@
 					</support-list>
 				</support-track>
 			</support>
+			<vspace-md></vspace-md>
 			<section>
-				<h3>Who We Are</h3>
-				<p>First Domino is a cross-ideological movement with one objective: European federation. Not as an abstract ideal, but as a political reality we intend to help build. We are not a party. We are not an institution. We are the opening move, the first domino that sets the rest in motion.</p>
-				<p>We begin by doing what movements do best: growing, spreading ideas, and making the case for a united Europe so compelling that it becomes impossible to ignore. Through coordinated social media campaigns, strategic partnerships, and content that cuts across the political spectrum, we shape the narrative from the ground up.</p>
-				<p>However, this is only the starting point, the bigger the movement, the further our reach: from online presence to real political weight, until federation is no longer a question. Every ideology is welcome here. Every contribution matters. The only requirement is belief in one idea: that Europe's future is federal.</p>
+				<horizontal-text-group>
+					<group>
+						<column>
+							<p>First Domino is a cross-ideological movement with one objective: European federation. Not as an abstract ideal, but as a political reality we intend to help build. We are not a party. We are not an institution. We are the opening move, the first domino that sets the rest in motion.</p>
+						</column>
+						<column>
+							<p>We begin by doing what movements do best: growing, spreading ideas, and making the case for a united Europe so compelling that it becomes impossible to ignore. Through coordinated social media campaigns, strategic partnerships, and content that cuts across the political spectrum, we shape the narrative from the ground up.</p>
+						</column>
+						<column>
+							<p>However, this is only the starting point, the bigger the movement, the further our reach: from online presence to real political weight, until federation is no longer a question. Every ideology is welcome here. Every contribution matters. The only requirement is belief in one idea: that Europe's future is federal.</p>
+						</column>
+					</group>
+				</horizontal-text-group>
 			</section>
 			<section>
-				Click on manifesto here
+				<sub>
+					<manifesto>
+						<p>A cross-ideological founding document, drafted together by socialists, greens, social democrats, liberals, and conservatives.</p>
+						<button>
+							<a href="/manifesto">Read</a>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link" aria-hidden="true">
+								<path d="M15 3h6v6"></path>
+								<path d="M10 14 21 3"></path>
+								<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+							</svg>
+						</button>
+					</manifesto>
+				</sub>
 			</section>
 			<footer>
 				<group>
