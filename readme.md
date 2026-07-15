@@ -82,3 +82,8 @@ This project was created using `bun init` in bun v1.3.13. [Bun](https://bun.com)
 
 
 `watchexec -e nix,ts,html --project-origin . -r -- nix run`
+
+
+
+
+

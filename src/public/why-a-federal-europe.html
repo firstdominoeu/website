@@ -14,6 +14,7 @@
 		<link rel="stylesheet" blocking="render" href="css/footer.css">
 		<link rel="stylesheet" blocking="render" href="css/navigation.css">
 		<link rel="stylesheet" blocking="render" href="css/reset.css">
+		<link rel="stylesheet" blocking="render" href="css/sidecon-card.css">
 		<script blocking="render" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 		<script blocking="render" src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 		<title>First Domino</title>
@@ -48,52 +49,120 @@
 				<h1>Why a Federal Europe?</h1>
 			</section>
 			<section>
-				<block>
+				<sidecon-card>
+					<header>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-euro-icon lucide-circle-euro">
+							<path d="M15 9.4a4 4 0 1 0 0 5.2"/>
+							<path d="M7 12h5"/>
+							<circle cx="12" cy="12" r="10"/>
+						</svg>
+					</header>
 					<content>
 						<h2>Economy</h2>
-						<p>Europe is the wealthiest continent that consistently acts as though it does not know it. The combined output of EU member states approaches $18 trillion, a figure that rivals the United States in scale. Yet that wealth is locked behind twenty-seven separate tax codes, regulatory frameworks built for national markets, and capital markets too fragmented to fund the next generation of European industry. The cost of this incoherence runs to an estimated €700 billion every year.</p>
-						<p>A federal fiscal architecture changes the equation entirely. Harmonised taxation, a genuine capital markets union, and shared sovereign debt instruments would release resources that fragmentation currently wastes. Europe would negotiate trade from a position of unified strength, attract investment at the scale its market actually warrants, and build the fiscal capacity to respond to crises at the speed they demand.</p>
+						<p>
+							<span>Europe is the wealthiest continent that consistently acts as though <em>it does not know it</em>.</span>
+							<span>The combined output of EU member states approaches $18 trillion, a figure that rivals the United States in scale.</span>
+							<span>Yet that wealth is locked behind twenty-seven separate tax codes, regulatory frameworks built for national markets, and capital markets too <em>too fragmented to fund</em> the next generation of European industry.</span>
+							<span>The cost of this incoherence runs to an estimated €700 billion every year.</span>
+						</p>
+						<p>
+							<span>A federal fiscal architecture changes the equation entirely.</span>
+							<span>Harmonised taxation, a genuine capital markets union, and shared sovereign debt instruments would release resources that fragmentation currently wastes.</span>
+							<span>Europe would negotiate trade from a position of unified strength, attract investment at the scale its market actually warrants, and <em>build the fiscal capacity to respond to crises at the speed they demand</em>.</span>
+						</p>
 					</content>
-					<offset>
-						<img alt="Economy" src="asset/image/grayscale/economy.png">
-					</offset>
-				</block>
+				</sidecon-card>
 			</section>
 			<section>
-				<block>
-					<offset>
-						<img alt="Defence" src="asset/image/grayscale/enemy.png">
-					</offset>
+				<sidecon-card>
+					<header>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-icon lucide-shield">
+							<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+						</svg>
+					</header>
 					<content>
 						<h2>Defence</h2>
-						<p>The threats surrounding Europe are neither distant nor theoretical. Russia wages open war on European soil. Washington has begun leveraging its alliances, deploying tariffs and economic pressure against partners it once treated as equals. Beijing expands its military presence and technological reach across continents with deliberate patience. Europe cannot afford to wait for guarantors who are themselves becoming unreliable.</p>
-						<p>And yet the continent already possesses the means to defend itself. European nations together field over 1.3 million active personnel and spend more than €200 billion on defence annually. That should make Europe a military superpower. Instead, eighty percent of procurement flows through national channels, producing 178 separate weapons systems where the United States fields 30. A federal defence structure would consolidate that spending, unify command, and place Europe second only to China in military scale. The strength is already there. What is missing is the architecture to use it.</p>
+						<p>
+							<span>The threats surrounding Europe are <em>neither distant nor theoretical</em>. Russia wages open war on European soil.</span>
+							<span>Washington has begun leveraging its alliances, deploying tariffs and economic pressure against partners it once treated as equals.</span>
+							<span>Beijing expands its military presence and technological reach across continents with deliberate patience.</span>
+							<span>Europe cannot afford to wait for guarantors who are themselves becoming unreliable.</span>
+						</p>
+						<p>
+							<span>And yet the continent already possesses the means to defend itself.</span>
+							<span>European nations together field over 1.3 million active personnel and spend more than €200 billion on defence annually.</span>
+							<span>That should make Europe a military superpower.</span>
+							<span>Instead, eighty percent of procurement flows through national channels, producing <em>178 separate weapons systems</em> where the United States fields 30.</span>
+							<span>A federal defence structure would consolidate that spending, unify command, and place Europe second only to China in military scale.</span>
+							<span>The strength is already there.</span>
+							<span><em>What is missing is the architecture to use it</em>.</span>
+						</p>
 					</content>
-				</block>
+				</sidecon-card>
 			</section>
 			<section>
-				<block>
+				<sidecon-card>
+					<header>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark-icon lucide-landmark">
+							<path d="M10 18v-7"/>
+							<path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"/>
+							<path d="M14 18v-7"/>
+							<path d="M18 18v-7"/>
+							<path d="M3 22h18"/>
+							<path d="M6 18v-7"/>
+						</svg>
+					</header>
 					<content>
 						<h2>Sovereignty</h2>
-						<p>In every room where the world's future is decided, Europe arrives divided. At the UN Security Council, the G20, and the great-power negotiations that shape trade, security, and the international order, Washington speaks as one, Beijing speaks as one, and Moscow speaks as one. Europe sends twenty-seven delegations and hopes for consensus. The result is a continent whose collective weight is vast and whose collective voice is nearly inaudible.</p>
-						<p>This is a choice, not a destiny. Federation does not diminish what European nations are. It amplifies what they can do together. A unified foreign policy backed by 450 million citizens and the world's largest economic bloc would carry an authority that no single European government, however capable, can approach alone. Europe's place in the world has never been in doubt. What has been missing is the will to claim it.</p>
+						<p>
+							<span>In every room where the world's future is decided, Europe arrives <em>divided</em>.</span>
+							<span>At the UN Security Council, the G20, and the great-power negotiations that shape trade, security, and the international order, Washington speaks as one, Beijing speaks as one, and Moscow speaks as one.</span>
+							<span>Europe sends twenty-seven delegations and hopes for consensus.</span>
+							<span>The result is a continent whose collective weight is vast and whose <em>collective voice is nearly inaudible</em>.</span>
+						</p>
+						<p>
+							<span>This is a choice, not a destiny.</span>
+							<span>Federation does not diminish what European nations are.</span>
+							<span>It amplifies what they can do together.</span>
+							<span>A unified foreign policy backed by 450 million citizens and the world's largest economic bloc would carry an authority that no single European government, however capable, can approach alone.</span>
+							<span>Europe's place in the world has never been in doubt.</span>
+							<span><em>What has been missing is the will to claim it</em>.</span>
+						</p>
 					</content>
-					<offset>
-						<img alt="Sovereignty" src="asset/image/grayscale/sovereignty.png">
-					</offset>
-				</block>
+				</sidecon-card>
 			</section>
 			<section>
-				<block>
-					<offset>
-						<img alt="Technology" src="asset/image/grayscale/technology.png">
-					</offset>
+				<sidecon-card>
+					<header>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-drone-icon lucide-drone">
+							<path d="M10 10 7 7"/>
+							<path d="m10 14-3 3"/>
+							<path d="m14 10 3-3"/>
+							<path d="m14 14 3 3"/>
+							<path d="M14.205 4.139a4 4 0 1 1 5.439 5.863"/>
+							<path d="M19.637 14a4 4 0 1 1-5.432 5.868"/>
+							<path d="M4.367 10a4 4 0 1 1 5.438-5.862"/>
+							<path d="M9.795 19.862a4 4 0 1 1-5.429-5.873"/>
+							<rect x="10" y="8" width="4" height="8" rx="1"/>
+						</svg>
+					</header>
 					<content>
 						<h2>Technology</h2>
-						<p>Europe is not short of talent. Its universities rank among the finest in the world, its researchers lead in fields from quantum computing to green energy, and its engineers are sought on every continent. What the continent cannot offer them is scale. No single European market matches the depth of American venture capital, the size of the Chinese consumer base, or the integrated infrastructure that turns research into industry. The talent leaves because the conditions to use it do not yet exist.</p>
-						<p>Building those conditions is precisely what federation makes possible. The European Investment Bank projects a €500 billion investment gap in deep technology over the coming decade. A federated Europe would close it, not by spending more in aggregate, but by spending together. A unified capital market, continent-wide research infrastructure, and a regulatory environment designed for growth rather than caution would create the conditions for European technology to compete on its own terms, and for the people who build it to stay.</p>
+						<p>
+							<span>Europe is <em>not short of talent</em>.</span>
+							<span>Its universities rank among the finest in the world, its researchers lead in fields from quantum computing to green energy, and its engineers are sought on every continent.</span>
+							<span>What the continent cannot offer them is scale.</span>
+							<span>No single European market matches the depth of American venture capital, the size of the Chinese consumer base, or the integrated infrastructure that turns research into industry.</span>
+							<span>The talent leaves because the <em>conditions to use it do not yet exist</em>.</span>
+						</p>
+						<p>
+							<span>Building those conditions is precisely what federation makes possible.</span>
+							<span>The European Investment Bank projects a €500 billion investment gap in deep technology over the coming decade.</span>
+							<span>A federated Europe would close it, not by spending more in aggregate, but by spending together.</span>
+							<span>A unified capital market, continent-wide research infrastructure, and a regulatory environment designed for growth rather than caution would <em>create the conditions for European technology to compete on its own terms, and for the people who build it to stay</em>.</span>
+						</p>
 					</content>
-				</block>
+				</sidecon-card>
 			</section>
 			<section>
 				<footer>

@@ -24,6 +24,22 @@
 	--pad-sm: clamp(0.5rem, 1vw + 0.25rem, 0.75rem);
 	--pad-md: clamp(1rem, 2vw + 0.5rem, 1.5rem);
 	--pad-lg: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+	--gradient-eu-header-0: linear-gradient(135deg, var(--color-smart-blue) 0%, #12225B 100%);
+	--gradient-eu-header-1: linear-gradient(135deg, #5C7EE6 0%, var(--color-smart-blue) 100%);
+	--gradient-eu-header-2: linear-gradient(105deg, var(--color-smart-blue) 30%, #262F76 100%);
+	--color-gradient-alabaster-gray-modern-slate: linear-gradient(
+		135deg,
+		#f8f9fa 0%,
+		#f1f3f5 60%,
+		#e9ecef 100%
+	);
+	--color-gradient-alabaster-gray-clean-ice: linear-gradient(
+		135deg,
+		#ffffff 0%,
+		#f8f9fa 50%,
+		#eef2f7 100%
+	);
+	--color-gradient-alabaster-gray-dark-steel: linear-gradient(135deg, #f1f3f5 0%, #e9ecef 70%, #dee2e6 100%);
 }
 @media screen and (max-width: 768px) {
 	:root {

@@ -52,11 +52,6 @@ banner spinning-star-loader img {
 		opacity: 0;
 	}
 }
-banner {
-	--gradient-eu-header-0: linear-gradient(135deg, var(--color-smart-blue) 0%, #12225B 100%);
-	--gradient-eu-header-1: linear-gradient(135deg, #5C7EE6 0%, var(--color-smart-blue) 100%);
-	--gradient-eu-header-2: linear-gradient(105deg, var(--color-smart-blue) 30%, #262F76 100%);
-}
 banner header {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);

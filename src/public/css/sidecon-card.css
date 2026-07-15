@@ -1,0 +1,47 @@
+sidecon-card {
+	display: flex;
+	align-items: stretch;
+	gap: var(--space-md);
+}
+sidecon-card header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--color-carbon-black-gradient);
+	border-radius: 4px;
+	padding: var(--space-md);
+}
+sidecon-card header svg {
+	color: var(--color-bright-snow);
+	width: 64px;
+	height: 64px;
+}
+sidecon-card content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+	background: var(--color-gradient-alabaster-gray-clean-ice);
+	padding: var(--space-md);
+	border-left: 4px solid var(--color-carbon-black);
+}
+sidecon-card h1, h2, h3 {
+	font-family: var(--font-body);
+	font-weight: bold;
+	color: var(--color-carbon-black);
+	margin-bottom: var(--space-md);
+	letter-spacing: -0.02em;
+}
+sidecon-card p {
+	font-size: var(--font-size-body);
+	font-family: var(--font-body);
+	font-weight: normal;
+	color: var(--color-carbon-black);
+	margin-bottom: var(--space-sm);
+	line-height: 1.6;
+	text-align: left;
+}
+sidecon-card p span {
+	display: inline;
+}

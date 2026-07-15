@@ -68,11 +68,23 @@ vspace-lg { display: block; min-height: 64px; }
 
 block {
 	display: flex;
-	align-items: center;
-	gap: var(--space-lg);
+	align-items: stretch;
+	gap: var(--space-md);
 }
 block content {
 	flex: 6;
+}
+block sidecon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--gradient-eu-header-0);
+	border-radius: 4px;
+	padding: var(--space-sm);
+}
+block sidecon svg {
+	color: var(--color-bright-snow);
 }
 block h1, h2, h3, h4, h5, h6 {
 	color: var(--color-smart-blue);
@@ -125,6 +137,46 @@ sub {
 	min-width: 100%;
 	max-width: 100%;
 	border-radius: 4px;
+	background: var(--color-gradient-alabaster-gray-clean-ice);
+	padding: var(--space-md);
+}
+card {
+	display: flex;
+	border-radius: 4px;
 	background: var(--color-alabaster-gray);
 	padding: var(--space-md);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-body);
+	font-weight: bold;
+	color: var(--color-carbon-black);
+}
+
+
+
+
+
+html {
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-smart-blue, #0d3b66) transparent;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--gradient-eu-header-0);
+	border: 2px solid transparent;
+	background-clip: padding-box;
+	border-radius: 99px;
+	transition: background-color 0.2s ease;
+	opacity: 0.6;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-carbon-black, #1a1a1a);
 }
