@@ -9,6 +9,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="/index.css">
+		<script type="module" src="/component/data-visualisations.js"></script>
 		<style>
 			:root {
 				--color-bright-snow: #F9F9F8;
@@ -447,6 +448,46 @@
 					</content>
 				</banner>
 			</section>
+			<section id="where-we-are" class="visual-section">
+				<div class="visual-section__inner">
+					<header class="visual-section__header">
+						<p class="visual-section__eyebrow">Our Reach</p>
+						<h2>Where We Are</h2>
+						<p>Our community reaches across Europe. Country colours show the current member distribution.</p>
+					</header>
+
+					<div class="map-card">
+						<div class="map-canvas">
+							<svg id="europe-map" class="europe-map" viewBox="0 0 960 600" role="img" aria-label="Map of First Domino members across Europe">
+								<g id="europe-map-countries"></g>
+							</svg>
+							<output id="map-tooltip" class="map-tooltip" aria-live="polite" hidden></output>
+						</div>
+						<div class="map-legend" aria-label="Member density legend">
+							<span>Fewer members</span>
+							<span class="map-legend__scale" aria-hidden="true"></span>
+							<span>More members</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="parliament" class="visual-section visual-section--parliament">
+				<div class="visual-section__inner">
+					<header class="visual-section__header">
+						<p class="visual-section__eyebrow">Our Structure</p>
+						<h2>The Parliament</h2>
+						<p>A simplified hemicycle built directly from the current ideology distribution.</p>
+					</header>
+
+					<div class="parliament-card">
+						<svg id="parliament-chart" class="parliament-chart" viewBox="0 0 900 500" role="img" aria-label="Proportional parliament of First Domino political groups" aria-describedby="parliament-details"></svg>
+						<output id="parliament-details" class="parliament-details" aria-live="polite"></output>
+					</div>
+
+				</div>
+			</section>
+
 			<section>
 				<support>
 					polishdane
