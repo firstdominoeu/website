@@ -1,0 +1,47 @@
+team-card {
+	display: flex;
+	flex-direction: column;
+}
+
+department {
+	display: flex;
+	flex-direction: row;
+	min-width: 200px;
+	max-width: 100%;
+}
+depertment header {
+	display: flex;
+}
+department member-group {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+department member {
+	display: flex;
+	flex-direction: column;
+}
+department member img {
+	display: flex;
+	min-width: 256px;
+	max-width: 256px;
+	border-radius: 4px;
+	object-fit: contain;
+}
+department member h1,
+department member h2,
+department member h3,
+department member h4,
+department member h5,
+department member h6 {
+	font-family: var(--font-body);
+	font-weight: bold;
+	color: var(--color-carbon-black);
+}
+
+display {
+	font-size: 12px;
+	font-family: var(--font-body);
+	font-weight: normal;
+	color: var(--color-carbon-black);
+}

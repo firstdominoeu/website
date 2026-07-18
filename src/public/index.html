@@ -9,13 +9,16 @@
 		<link rel="preconnect" blocking="render" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="stylesheet" blocking="render" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 		<link rel="stylesheet" blocking="render" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
-		<link rel="stylesheet" blocking="render" href="css/banner.css">
-		<link rel="stylesheet" blocking="render" href="css/constant.css">
-		<link rel="stylesheet" blocking="render" href="css/footer.css">
-		<link rel="stylesheet" blocking="render" href="css/navigation.css">
-		<link rel="stylesheet" blocking="render" href="css/reset.css">
-		<link rel="stylesheet" blocking="render" href="css/horizontal-slide.css">
-		<link rel="stylesheet" blocking="render" href="css/sidecon-card.css">
+		<link rel="stylesheet" blocking="render" href="asset/banner.css">
+		<link rel="stylesheet" blocking="render" href="asset/constant.css">
+		<link rel="stylesheet" blocking="render" href="asset/footer.css">
+		<link rel="stylesheet" blocking="render" href="asset/navigation.css">
+		<link rel="stylesheet" blocking="render" href="asset/reset.css">
+		<link rel="stylesheet" blocking="render" href="asset/horizontal-slide.css">
+		<link rel="stylesheet" blocking="render" href="asset/sidecon-card.css">
+		<link rel="stylesheet" blocking="render" href="asset/map.css">
+		<link rel="stylesheet" blocking="render" href="asset/map-visual.css">
+		<link rel="stylesheet" blocking="render" href="asset/parliament.css">
 		<style>
 			support {
 				display: block;
@@ -39,13 +42,11 @@
 			    font-weight: 500;
 			    white-space: nowrap;
 			}
-
 			@media (width <= 768px) {
 				support {
 					display: none;
 				}
 			}
-
 			manifesto {
 				display: flex;
 				flex-direction: column;
@@ -53,6 +54,7 @@
 		</style>
 		<script blocking="render" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 		<script blocking="render" src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+		<script blocking="render" src="asset/parliament-and-map.js"></script>
 		<script>
 			document.addEventListener("DOMContentLoaded", () => {
 				let supporters = document.getElementById("supporters");
@@ -105,6 +107,16 @@
 						</button>
 						<button>
 							<a href="/why-a-federal-europe">Why a Federal Europe</a>
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link" aria-hidden="true">
+									<path d="M15 3h6v6"></path>
+									<path d="M10 14 21 3"></path>
+									<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+								</svg>
+							</span>
+						</button>
+						<button>
+							<a href="/team">Team</a>
 							<span>
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link" aria-hidden="true">
 									<path d="M15 3h6v6"></path>
@@ -211,6 +223,40 @@
 					</manifesto>
 				</sub>
 			</section>
+
+			<!-- slop -->
+			<section>
+				<parliament>
+					<header>
+						<h1>Our Structure</h1>
+						<p>Who are we made of?</p>
+					</header>
+					<div class="parliament-card">
+						<svg id="parliament-chart" class="parliament-chart" viewBox="0 0 900 500" role="img" aria-label="Proportional parliament of First Domino political groups" aria-describedby="parliament-details"></svg>
+						<output id="parliament-details" class="parliament-details" aria-live="polite"></output>
+					</div>
+				</parliament>
+			</section>
+
+			<!-- slop -->
+			<section id="where-we-are">
+				<div class="visual-section__inner">
+					<div class="map-card">
+						<div class="map-canvas">
+							<svg id="europe-map" class="europe-map" viewBox="0 0 960 600" role="img" aria-label="Map of First Domino members across Europe">
+								<g id="europe-map-countries"></g>
+							</svg>
+							<output id="map-tooltip" class="map-tooltip" aria-live="polite" hidden></output>
+						</div>
+						<div class="map-legend" aria-label="Member density legend">
+							<span>Fewer members</span>
+							<span class="map-legend__scale" aria-hidden="true"></span>
+							<span>More members</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<section>
 				<footer>
 					<group>
