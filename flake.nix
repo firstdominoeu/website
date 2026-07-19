@@ -28,6 +28,7 @@
 					pkgs.html-tidy
 					pkgs.htmlhint
 					pkgs.live-server
+					pkgs.docker
 
 					config.packages.dev
 				];
