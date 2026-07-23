@@ -292,22 +292,62 @@ function renderParliament(ideologyData) {
 		}));
 	});
 
-	function updateDetails(key) {
-		details.replaceChildren();
-		const title = document.createElement("strong");
-		const value = document.createElement("span");
+	function detailBlock(title, value, description) {
+		const block = document.createElement("div");
+		block.className = "parliament-details__block";
+		const titleElement = document.createElement("strong");
+		const valueElement = document.createElement("span");
+		const descriptionElement = document.createElement("small");
+		titleElement.textContent = title;
+		valueElement.textContent = value;
+		descriptionElement.textContent = description;
+		block.append(titleElement, valueElement, descriptionElement);
+		return block;
+	}
+
+	function summaryOf(key) {
 		if (!key) {
-			title.textContent = `${NUMBER_FORMAT.format(total)} members`;
-			value.textContent = `${VISUAL_SEATS} visual seats, allocated proportionally from the ideology data.`;
-			details.append(title, value);
-			return;
+			return [
+				`${NUMBER_FORMAT.format(total)} members`,
+				`${VISUAL_SEATS} visual seats, allocated proportionally from the ideology data.`,
+				""
+			];
 		}
 		const group = groupByKey.get(key);
-		title.textContent = group.label;
-		value.textContent = `${NUMBER_FORMAT.format(group.count)} members · ${percentage(group.count, total)} · ${seats[key]} visual seats`;
-		const description = document.createElement("small");
-		description.textContent = group.description;
-		details.append(title, value, description);
+		return [
+			group.label,
+			`${NUMBER_FORMAT.format(group.count)} members · ${percentage(group.count, total)} · ${seats[key]} visual seats`,
+			group.description
+		];
+	}
+
+	const ghost = document.createElement("div");
+	ghost.className = "parliament-details__ghost";
+	ghost.setAttribute("aria-hidden", "true");
+	ghost.append(
+		detailBlock(...summaryOf(null)),
+		...groups.map(group => detailBlock(...summaryOf(group.key)))
+	);
+
+	const live = detailBlock(...summaryOf(null));
+	const [liveTitle, liveValue, liveDescription] = live.children;
+	const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+	let fade = null;
+	details.replaceChildren(ghost, live);
+
+	function updateDetails(key) {
+		const [title, value, description] = summaryOf(key);
+		if (liveTitle.textContent === title) {
+			return;
+		}
+		liveTitle.textContent = title;
+		liveValue.textContent = value;
+		liveDescription.textContent = description;
+		if (reducedMotion.matches) {
+			return;
+		}
+		fade?.cancel();
+		fade = live.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 140, easing: "ease-out" });
 	}
 
 	function activate(key) {

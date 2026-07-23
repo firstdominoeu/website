@@ -19,15 +19,6 @@ horizontal-text-group column {
 	max-width: 400px;
 }
 
-horizontal-text-group p {
-	font-size: 1em;
-	font-family: var(--font-body);
-	font-weight: normal;
-	line-height: 1.6;
-	color: var(--color-carbon-black);
-	text-align: justify;
-}
-
 @media (width < 768px) {
 	horizontal-text-group {
 		grid-template-columns: repeat(2, auto);
