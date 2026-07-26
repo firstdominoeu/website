@@ -55,14 +55,28 @@
 	stroke-width: 0.8;
 }
 .parliament-details {
-	display: flex;
-	flex-direction: column;
-	min-height: 5rem;
+	display: grid;
 	margin: 0.25rem auto 0;
 	padding: 1rem;
 	border-top: 1px solid var(--color-alabaster-gray);
 	text-align: center;
 	font-family: var(--font-body);
+}
+.parliament-details > * {
+	grid-area: 1 / 1;
+}
+.parliament-details__block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.parliament-details__ghost {
+	display: grid;
+	visibility: hidden;
+	pointer-events: none;
+}
+.parliament-details__ghost > * {
+	grid-area: 1 / 1;
 }
 .parliament-details strong {
 	font-size: 1.4rem;
@@ -83,9 +97,6 @@
 @media screen and (max-width: 600px) {
 	.parliament-card {
 		padding: 0.65rem;
-	}
-	.parliament-details {
-		min-height: 6.4rem;
 	}
 }
 @media (prefers-reduced-motion: reduce) {
@@ -123,4 +134,3 @@ parliament header p {
 	font-family: var(--font-body);
 	font-weight: normal;
 }
-
