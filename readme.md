@@ -58,10 +58,10 @@ nix-collect-garbage -d
 
 
 
-Website domain:
+Website link:
 
 ```text
-firstdominoofficial.eu
+https://www.firstdomino.eu/
 ```
 
 To install dependencies:
